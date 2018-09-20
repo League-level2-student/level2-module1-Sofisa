@@ -1,15 +1,22 @@
 package intro_to_array_lists;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
-public class GuestBook {
+public class GuestBook implements ActionListener {
 	void createGUI() {
 	JFrame frame = new JFrame();
 	frame.setVisible(true);
-	JButton addName = new JButton();
-	JButton view = new JButton();
+	addName = new JButton();
+	addName.addActionListener(this);
+	view = new JButton();
+	view.addActionListener(this);
 	addName.setText("Add Name");
 	view.setText("View Names");
 	JPanel panel = new JPanel();
@@ -20,11 +27,23 @@ public class GuestBook {
 	 
 		
 	}
+	JButton addName;
+	JButton view;
 	public static void main(String[] args) {
 		GuestBook g = new GuestBook();
 		g.createGUI();
 	}
 	// Create a GUI with two buttons. One button reads "Add Name" and the other button reads "View Names". 
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+	if(e.getSource() == addName) {
+		String namee = JOptionPane.showInputDialog("Add name here");
+	}
+	if(e.getSource() == view) {
+		
+	}
+	}
 	
 	// When the add name button is clicked, display an input dialog that asks the user to enter a name. Add
 	
