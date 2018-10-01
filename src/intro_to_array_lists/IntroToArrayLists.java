@@ -22,9 +22,9 @@ public class IntroToArrayLists {
 			JOptionPane.showMessageDialog(null, words.get(i));
 		}
 		//4. Print all the Strings using a for-each loop
-		for (String string : words) {
-			JOptionPane.showMessageDialog(null, string);
-		}
+		//for (String string : words) {
+			//JOptionPane.showMessageDialog(null, string);
+		//}
 		//5. Print only the even numbered elements in the list.
 		for (int i = 0; i < 5; i++) {
 		if (i % 2 == 0) {
@@ -36,8 +36,10 @@ public class IntroToArrayLists {
 			JOptionPane.showMessageDialog(null, words.get(i));
 		}
 		//7. Print only the Strings that have the letter 'e' in them.
-		for (int i = 0; i < args.length; i++) {
-			JOptionPane.showMessageDialog(null, words.get(i).contains("e"));
+		for (int i = 0; i < words.size(); i++) {
+			if (words.get(i).contains("e")) {
+				JOptionPane.showMessageDialog(null, words.get(i));
+			}
 		}
 		}
 	}
