@@ -21,14 +21,15 @@ public class LeagueInvadersMegaRecipe {
 		game = new GamePanel();
 		final int height = 800;
 		frame.add(game);
+		frame.addKeyListener(game);
 		frame.getContentPane();
 		frame.setPreferredSize(new Dimension(width, height));
 		frame.pack();
-		
+
 		frame.setVisible(true);
 		frame.setSize(width, height);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		game.startGame();
 	}
 }
