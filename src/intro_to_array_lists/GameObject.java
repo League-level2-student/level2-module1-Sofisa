@@ -19,6 +19,15 @@ public class GameObject {
 		if (up) {
 			y--;
 		}
+		if (down) {
+			y++;
+		}
+		if (right) {
+			x++;
+		}
+		if (left) {
+			x--;
+		}
 	}
 
 	void draw(Graphics g) {

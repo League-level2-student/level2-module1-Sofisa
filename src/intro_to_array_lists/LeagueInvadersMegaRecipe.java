@@ -11,23 +11,23 @@ public class LeagueInvadersMegaRecipe {
 
 	}
 
+	static final int HEIGHT = 800;
+	static final int WIDTH = 500;
 	JFrame frame;
 	GamePanel game;
 
 	private void setup() {
 		// TODO Auto-generated method stub
 		frame = new JFrame();
-		final int width = 500;
 		game = new GamePanel();
-		final int height = 800;
 		frame.add(game);
 		frame.addKeyListener(game);
 		frame.getContentPane();
-		frame.setPreferredSize(new Dimension(width, height));
+		frame.setPreferredSize(new Dimension(WIDTH, HEIGHT));
 		frame.pack();
 
 		frame.setVisible(true);
-		frame.setSize(width, height);
+		frame.setSize(WIDTH, HEIGHT);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		game.startGame();
