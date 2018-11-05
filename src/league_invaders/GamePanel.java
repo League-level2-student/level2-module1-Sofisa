@@ -1,6 +1,7 @@
-package intro_to_array_lists;
+package league_invaders;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,11 +18,16 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 	final int GAME_STATE = 1;
 	final int END_STATE = 2;
 	int currentState = MENU_STATE;
-
+	Font titleFont;
+	Font enterFont;
+	Font spaceFont;
 	GamePanel() {
 		// object = new GameObject(10,10,10,10);
-
+     titleFont = new Font("Arial", Font.PLAIN, 48);
+     enterFont = new Font ("Arial", Font.PLAIN, 30);
+	 spaceFont = new Font ("Arial", Font.PLAIN, 30);
 	}
+	
 
 	@Override
 
@@ -84,7 +90,15 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 		g.setColor(Color.BLUE);
 
 		g.fillRect(0, 0, LeagueInvadersMegaRecipe.WIDTH, LeagueInvadersMegaRecipe.HEIGHT);
+		g.setFont(titleFont);
+		g.setColor(new Color(255, 255, 0));
+		g.drawString("LEAGUE INVADERS", 20, 200);
+		g.setFont(enterFont);
+		g.setColor(new Color(255, 255, 0));
+		g.drawString("press ENTER to start", 100, 350);
+		g.drawString("Press SPACE for instructions", 70, 550);
 	}
+	
 
 	void drawGameState(Graphics g) {
 		g.setColor(Color.BLACK);
@@ -95,8 +109,14 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 
 	void drawEndState(Graphics g) {
 		g.setColor(Color.RED);
-
 		g.fillRect(0, 0, LeagueInvadersMegaRecipe.WIDTH, LeagueInvadersMegaRecipe.HEIGHT);
+		g.setFont(titleFont);
+		g.setColor(new Color(255, 255, 0));
+		g.drawString("LEAGUE INVADERS", 20, 200);
+		g.setFont(enterFont);
+		g.setColor(new Color(255, 255, 0));
+		g.drawString("press ENTER to start", 100, 350);
+		g.drawString("Press SPACE for instructions", 70, 550);
 	}
 
 	@Override

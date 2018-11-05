@@ -1,4 +1,4 @@
-package intro_to_array_lists;
+package league_invaders;
 
 import java.awt.Dimension;
 

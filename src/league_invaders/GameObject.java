@@ -1,4 +1,4 @@
-package intro_to_array_lists;
+package league_invaders;
 
 import java.awt.Graphics;
 
@@ -16,21 +16,10 @@ public class GameObject {
 	}
 
 	void update() {
-		if (up) {
-			y--;
-		}
-		if (down) {
-			y++;
-		}
-		if (right) {
-			x++;
-		}
-		if (left) {
-			x--;
-		}
+	
 	}
 
 	void draw(Graphics g) {
-		g.fillRect(x, y, 100, 100);
+
 	}
 }
