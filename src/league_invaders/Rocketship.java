@@ -1,9 +1,32 @@
 package league_invaders;
 
-public class Rocketship extends GameObject {
+import java.awt.Color;
+import java.awt.Graphics;
 
-	
-	//Rocketship(x,y,width,height){
-		
-	//}
+public class Rocketship extends GameObject {
+int speed;
+	Rocketship(int x, int y, int width, int height) {
+		super(x, y, width, height);
+		speed = 5;
+	}
+
+	void update() {
+		if (up) {
+			y -= speed;
+		}
+		if (down) {
+			y+= speed;
+		}
+		if (right) {
+			x+= speed;
+		}
+		if (left) {
+			x-= speed;
+		}
+	}
+
+	void draw(Graphics g) {
+		g.setColor(Color.BLUE);
+		g.fillRect(x, y, width, height);
+	}
 }

@@ -3,11 +3,11 @@ package league_invaders;
 import java.awt.Graphics;
 
 public class GameObject {
-	int x,y;
+	int x, y;
 	int width;
 	int height;
-	boolean up,down, left, right;
-
+	boolean up, down, left, right;
+	boolean isAlive;
 	GameObject(int x, int y, int width, int height) {
 		this.x = x;
 		this.y = y;
@@ -16,10 +16,11 @@ public class GameObject {
 	}
 
 	void update() {
-	
+		
 	}
 
 	void draw(Graphics g) {
 
 	}
+	
 }
