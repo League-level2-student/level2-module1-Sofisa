@@ -14,6 +14,7 @@ import javax.swing.Timer;
 public class GamePanel extends JPanel implements ActionListener, KeyListener {
 	Timer time = new Timer(1000 / 60, this);
 	// GameObject object;
+
 	final int MENU_STATE = 0;
 	final int GAME_STATE = 1;
 	final int END_STATE = 2;
@@ -22,14 +23,13 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 	Font enterFont;
 	Font spaceFont;
 	Rocketship rocket = new Rocketship(250, 700, 50, 50);
-
+	ObjectManager object = new ObjectManager(rocket);
 	GamePanel() {
 		// object = new GameObject(10,10,10,10);
 		titleFont = new Font("Arial", Font.PLAIN, 48);
 		enterFont = new Font("Arial", Font.PLAIN, 30);
 		spaceFont = new Font("Arial", Font.PLAIN, 30);
 	}
-
 	@Override
 
 	public void paintComponent(Graphics g) {
@@ -83,7 +83,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 	}
 
 	void updateGameState() {
-		rocket.update();
+		object.update();
 	}
 
 	void drawMenuState(Graphics g) {
@@ -104,7 +104,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 		g.setColor(Color.BLACK);
 
 		g.fillRect(0, 0, LeagueInvadersMegaRecipe.WIDTH, LeagueInvadersMegaRecipe.HEIGHT);
-		rocket.draw(g);
+		object.draw(g);
 	}
 
 	void drawEndState(Graphics g) {
