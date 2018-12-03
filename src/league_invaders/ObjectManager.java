@@ -1,6 +1,7 @@
 package league_invaders;
 
 import java.awt.Graphics;
+import java.util.ArrayList;
 
 public class ObjectManager {
 	Rocketship rocket;
@@ -17,6 +18,10 @@ public class ObjectManager {
 		rocket.draw(g);
 	}
 	
+	ArrayList <Projectile> projectiles = new ArrayList<>();
 	
+	void addProjectile(Projectile p) {
+		projectiles.add(p);
+	}
 	
 }
