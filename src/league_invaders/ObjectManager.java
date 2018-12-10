@@ -11,11 +11,16 @@ public class ObjectManager {
 	
 	void update() {
 		rocket.update();
-		
+		for(Projectile p : projectiles) {
+			p.update();
+		}
 	}
 	
 	void draw(Graphics g) {
 		rocket.draw(g);
+		for(Projectile p : projectiles) {
+			p.draw(g);
+		}
 	}
 	
 	ArrayList <Projectile> projectiles = new ArrayList<>();

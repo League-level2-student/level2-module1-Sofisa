@@ -128,6 +128,9 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
+		if (e.getKeyCode() == KeyEvent.VK_SPACE)  {
+			object.addProjectile(new Projectile(rocket.x, rocket.y, 10, 10));
+		}
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
 			rocket.up= true;
 		}
