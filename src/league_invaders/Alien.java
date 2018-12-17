@@ -13,6 +13,8 @@ public class Alien extends GameObject{
 	}
 
 	void update(){
+		super.update();
+        collisionBox.setBounds(x, y, width, height);
 		y+=1;
 	}
 	
@@ -22,5 +24,4 @@ public class Alien extends GameObject{
 	}
 	
 	
-	ArrayList <Alien> aliens = new ArrayList<>();
 }

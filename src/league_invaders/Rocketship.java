@@ -11,6 +11,7 @@ int speed;
 	}
 
 	void update() {
+		super.update();
 		if (up) {
 			y -= speed;
 		}
