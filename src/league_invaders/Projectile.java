@@ -13,19 +13,19 @@ public class Projectile extends GameObject {
 	}
 
 	void update() {
-        collisionBox.setBounds(x, y, width, height);
-        super.update();
+		super.update();
+		collisionBox.setBounds(x, y, width, height);
 		y -= speed;
-		if (y<0) {
-		isAlive = false;
+		if (y < 0) {
+			isAlive = false;
 		}
 	}
 
 	void draw(Graphics g) {
-		g.setColor(Color.RED);
-		g.fillRect(x+20, y, width, height);
+		 g.drawImage(GamePanel.bulletImg, x, y, width, height, null);
+
+
+
 	}
-	
-	
 
 }

@@ -15,6 +15,7 @@ public class GameObject {
 		this.y = y;
 		this.width = width;
 		this.height = height;
+		isAlive = true;
 	}
 
 	void update() {
